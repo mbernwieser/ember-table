@@ -5,7 +5,7 @@ import { A as emberA } from '@ember/array';
 import defaultTo from '../../-private/utils/default-to';
 import { addObserver } from '../../-private/utils/observer';
 import { computed } from '@ember/object';
-import { notEmpty, or, readOnly } from '@ember/object/computed';
+import { notEmpty, or } from '@ember/object/computed';
 
 import { closest } from '../../-private/utils/element';
 import { sortMultiple, compareValues } from '../../-private/utils/sort';
@@ -184,8 +184,6 @@ export default Component.extend({
     @type Action?
   */
   onResize: null,
-
-  'data-test-row-count': readOnly('wrappedRows.length'),
 
   init() {
     this._super(...arguments);
